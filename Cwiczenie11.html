@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Cwiczenie 11</title>
+    <style type="text/css">
+        body,html{
+            padding: 0;
+            margin: 0;
+        }
+        #box1{
+            width: 50%;
+            background-color: pink;
+
+            float: left;
+            height: 970px;
+        }
+        #box2{
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+            margin: right;
+            float: auto;
+            height: 485px;
+        }
+        #box3{
+            background-color: bisque;
+            float: auto;
+            height: 485px;
+        }       
+  
+    </style>
+    <script type="text.javascript">
+
+    </script>
+</head>
+<body bgcolor="#4f4f4f">
+    <div id="box1">
+        <script type="text/javascript">
+        $(function(){
+            $("#dodaj").on("click",function(){
+                var val = $("input").val();
+                if(val != ""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append("<button class='mojaklasa'>usuń</button>");
+                    $("#mojalista").append(element);
+                    $("input").val("");
+                    $(".mojaklasa").on("click",function(){
+                        $(this).parent().remove();
+                    });
+                }
+            });
+        });            
+        </script>
+     <h1>Plan: </h1>
+    <input type="text" placeholder="Nowy Punkt Planu" />
+    <button id="dodaj">DODAJ</button>
+    <ol id="mojalista"> </ol>
+    </div>
+
+        <div id="box2">
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".przycisk").click(function(){
+                        $("#paragraf").css("color","red").slideUp(500).slideDown(500);
+                    });
+                });
+            </script>
+            <p id="paragraf">🌟</p>
+            <button class="przycisk">Animacja</button>
+        </div>
+        <div id="box3">
+<script>
+            function dodaj(){
+                var liczba1=parseInt(document.getElementById("liczba1").value);
+                var liczba2=parseInt(document.getElementById("liczba2").value);
+                var wynik1=liczba1+liczba2;
+                document.getElementById("wynik").innerHTML=wynik1;
+             }
+            function odejmij(){
+                var liczba1=parseInt(document.getElementById("liczba1").value);
+                var liczba2=parseInt(document.getElementById("liczba2").value);
+                var wynik2=liczba1-liczba2;
+                document.getElementById("wynik").innerHTML=wynik2;
+            }
+            function mnoz(){
+                var liczba1=parseInt(document.getElementById("liczba1").value);
+                var liczba2=parseInt(document.getElementById("liczba2").value);
+                var wynik3=liczba1*liczba2;
+                document.getElementById("wynik").innerHTML=wynik3;
+             }
+            function dziel(){
+                var liczba1=parseInt(document.getElementById("liczba1").value);
+                var liczba2=parseInt(document.getElementById("liczba2").value);
+                var wynik4=liczba1/liczba2;
+                document.getElementById("wynik").innerHTML=wynik4;
+            }
+
+        </script>
+Liczba 1 <input type="text" id="liczba1"><br><br>
+Liczba 2 <input type="text" id="liczba2"><br><br>
+<button onclick="dodaj()">DODAJ</button>
+<button onclick="odejmij()">ODEJMIJ</button>
+<button onclick="mnoz()">MNÓŻ</button>
+<button onclick="dziel()">DZIEL</button><br>
+
+Wynik: <div id="wynik"></div>
+    </div>
+</body>
+</html>
