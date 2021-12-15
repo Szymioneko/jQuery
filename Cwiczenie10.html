@@ -23,7 +23,7 @@
                 var val = $("input").val();
                 if(val != ""){
                     var element = $("<li></li>").text(val);
-                    $(element).append("<button class='mojaklasa'>x</button>");
+                    $(element).append("<button class='mojaklasa'>usuń</button>");
                     $("#mojalista").append(element);
                     $("input").val("");
                     $(".mojaklasa").on("click",function(){
