@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>jQuery - Ćwiczenie 1</title>
+    <title>jQuery - Ćwiczenie 2</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#przycisk").click(function(){
+                var szerokosc = $(".napis").width();
+                var wysokosc = $(".napis").height();
+                $("#info").html(szerokosc + " : " + wysokosc);
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>Ćwiczenie 1 - JQuery</h1>
+    <h1>Ćwiczenie 2 - JQuery</h1>
+    <div id="info"></div>
+    <div id="przycisk">SPRAWDZ SZEROKOŚĆ i WYSOKOŚĆ OBIEKTU</div>
+    <div class="napis">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur hic. Provident atque quos officia molestiae, quas rerum, facilis eos modi nobis et corrupti? Veritatis harum libero inventore dicta iste?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae sapiente, nesciunt asperiores beatae eaque dignissimos obcaecati voluptatem cupiditate assumenda, aliquid veniam earum et nam esse porro facere dolorem alias dolor?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil vel numquam quisquam consequatur omnis debitis pariatur fugit eius totam labore ipsum placeat exercitationem porro quos ea nulla, eligendi ipsa nam.
+    </div>
 </body>
 </html>
